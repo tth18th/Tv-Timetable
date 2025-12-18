@@ -1,0 +1,697 @@
+{
+    "metadata": {
+        "year": "2025",
+        "month": "12",
+        "generated_date": "2025-12-01 08:10:53",
+        "city": "Dundee",
+        "country": "GB"
+    },
+    "prayer_times": {
+        "2025-12-01": {
+            "date": "2025-12-01",
+            "day_number": 1,
+            "day_name": "Mon",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:02",
+                "Sunrise": "08:22",
+                "Dhuhr": "12:01",
+                "Asr": "13:52",
+                "Maghrib": "15:40",
+                "Isha": "17:53"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:45",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-02": {
+            "date": "2025-12-02",
+            "day_number": 2,
+            "day_name": "Tue",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:03",
+                "Sunrise": "08:24",
+                "Dhuhr": "12:02",
+                "Asr": "13:52",
+                "Maghrib": "15:39",
+                "Isha": "17:52"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:44",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-03": {
+            "date": "2025-12-03",
+            "day_number": 3,
+            "day_name": "Wed",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:04",
+                "Sunrise": "08:25",
+                "Dhuhr": "12:02",
+                "Asr": "13:51",
+                "Maghrib": "15:38",
+                "Isha": "17:52"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:43",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-04": {
+            "date": "2025-12-04",
+            "day_number": 4,
+            "day_name": "Thu",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:05",
+                "Sunrise": "08:27",
+                "Dhuhr": "12:02",
+                "Asr": "13:50",
+                "Maghrib": "15:37",
+                "Isha": "17:51"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:42",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-05": {
+            "date": "2025-12-05",
+            "day_number": 5,
+            "day_name": "Fri",
+            "is_friday": true,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:06",
+                "Sunrise": "08:28",
+                "Dhuhr": "12:03",
+                "Asr": "13:49",
+                "Maghrib": "15:37",
+                "Isha": "17:51"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:42",
+                "Isha_Jamaah": "18:30",
+                "Jumuah": "13:15"
+            }
+        },
+        "2025-12-06": {
+            "date": "2025-12-06",
+            "day_number": 6,
+            "day_name": "Sat",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:08",
+                "Sunrise": "08:30",
+                "Dhuhr": "12:03",
+                "Asr": "13:49",
+                "Maghrib": "15:36",
+                "Isha": "17:51"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "15:15",
+                "Maghrib_Jamaah": "15:41",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-07": {
+            "date": "2025-12-07",
+            "day_number": 7,
+            "day_name": "Sun",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:09",
+                "Sunrise": "08:31",
+                "Dhuhr": "12:04",
+                "Asr": "13:48",
+                "Maghrib": "15:36",
+                "Isha": "17:51"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:41",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-08": {
+            "date": "2025-12-08",
+            "day_number": 8,
+            "day_name": "Mon",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:10",
+                "Sunrise": "08:33",
+                "Dhuhr": "12:04",
+                "Asr": "13:48",
+                "Maghrib": "15:35",
+                "Isha": "17:50"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:40",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-09": {
+            "date": "2025-12-09",
+            "day_number": 9,
+            "day_name": "Tue",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:11",
+                "Sunrise": "08:34",
+                "Dhuhr": "12:04",
+                "Asr": "13:48",
+                "Maghrib": "15:35",
+                "Isha": "17:50"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:40",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-10": {
+            "date": "2025-12-10",
+            "day_number": 10,
+            "day_name": "Wed",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:12",
+                "Sunrise": "08:35",
+                "Dhuhr": "12:05",
+                "Asr": "13:47",
+                "Maghrib": "15:34",
+                "Isha": "17:50"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:39",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-11": {
+            "date": "2025-12-11",
+            "day_number": 11,
+            "day_name": "Thu",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:13",
+                "Sunrise": "08:36",
+                "Dhuhr": "12:05",
+                "Asr": "13:47",
+                "Maghrib": "15:34",
+                "Isha": "17:50"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:39",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-12": {
+            "date": "2025-12-12",
+            "day_number": 12,
+            "day_name": "Fri",
+            "is_friday": true,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:14",
+                "Sunrise": "08:38",
+                "Dhuhr": "12:06",
+                "Asr": "13:47",
+                "Maghrib": "15:34",
+                "Isha": "17:50"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:39",
+                "Isha_Jamaah": "18:30",
+                "Jumuah": "13:15"
+            }
+        },
+        "2025-12-13": {
+            "date": "2025-12-13",
+            "day_number": 13,
+            "day_name": "Sat",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:15",
+                "Sunrise": "08:39",
+                "Dhuhr": "12:06",
+                "Asr": "13:47",
+                "Maghrib": "15:34",
+                "Isha": "17:50"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:39",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-14": {
+            "date": "2025-12-14",
+            "day_number": 14,
+            "day_name": "Sun",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:16",
+                "Sunrise": "08:40",
+                "Dhuhr": "12:07",
+                "Asr": "13:46",
+                "Maghrib": "15:34",
+                "Isha": "17:50"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:39",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-15": {
+            "date": "2025-12-15",
+            "day_number": 15,
+            "day_name": "Mon",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:16",
+                "Sunrise": "08:41",
+                "Dhuhr": "12:07",
+                "Asr": "13:46",
+                "Maghrib": "15:34",
+                "Isha": "17:51"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:39",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-16": {
+            "date": "2025-12-16",
+            "day_number": 16,
+            "day_name": "Tue",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:17",
+                "Sunrise": "08:42",
+                "Dhuhr": "12:08",
+                "Asr": "13:46",
+                "Maghrib": "15:34",
+                "Isha": "17:51"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:39",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-17": {
+            "date": "2025-12-17",
+            "day_number": 17,
+            "day_name": "Wed",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:18",
+                "Sunrise": "08:42",
+                "Dhuhr": "12:08",
+                "Asr": "13:47",
+                "Maghrib": "15:34",
+                "Isha": "17:51"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:39",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-18": {
+            "date": "2025-12-18",
+            "day_number": 18,
+            "day_name": "Thu",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:19",
+                "Sunrise": "08:43",
+                "Dhuhr": "12:09",
+                "Asr": "13:47",
+                "Maghrib": "15:34",
+                "Isha": "17:51"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:39",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-19": {
+            "date": "2025-12-19",
+            "day_number": 19,
+            "day_name": "Fri",
+            "is_friday": true,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:19",
+                "Sunrise": "08:44",
+                "Dhuhr": "12:09",
+                "Asr": "13:47",
+                "Maghrib": "15:35",
+                "Isha": "17:52"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:40",
+                "Isha_Jamaah": "18:30",
+                "Jumuah": "13:15"
+            }
+        },
+        "2025-12-20": {
+            "date": "2025-12-20",
+            "day_number": 20,
+            "day_name": "Sat",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:20",
+                "Sunrise": "08:44",
+                "Dhuhr": "12:10",
+                "Asr": "13:47",
+                "Maghrib": "15:35",
+                "Isha": "17:52"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:40",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-21": {
+            "date": "2025-12-21",
+            "day_number": 21,
+            "day_name": "Sun",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:20",
+                "Sunrise": "08:45",
+                "Dhuhr": "12:10",
+                "Asr": "13:48",
+                "Maghrib": "15:35",
+                "Isha": "17:53"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:40",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-22": {
+            "date": "2025-12-22",
+            "day_number": 22,
+            "day_name": "Mon",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:21",
+                "Sunrise": "08:46",
+                "Dhuhr": "12:11",
+                "Asr": "13:48",
+                "Maghrib": "15:36",
+                "Isha": "17:53"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:41",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-23": {
+            "date": "2025-12-23",
+            "day_number": 23,
+            "day_name": "Tue",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:21",
+                "Sunrise": "08:46",
+                "Dhuhr": "12:11",
+                "Asr": "13:49",
+                "Maghrib": "15:37",
+                "Isha": "17:54"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:42",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-24": {
+            "date": "2025-12-24",
+            "day_number": 24,
+            "day_name": "Wed",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:22",
+                "Sunrise": "08:46",
+                "Dhuhr": "12:12",
+                "Asr": "13:49",
+                "Maghrib": "15:37",
+                "Isha": "17:54"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:42",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-25": {
+            "date": "2025-12-25",
+            "day_number": 25,
+            "day_name": "Thu",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:22",
+                "Sunrise": "08:47",
+                "Dhuhr": "12:12",
+                "Asr": "13:50",
+                "Maghrib": "15:38",
+                "Isha": "17:55"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:43",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-26": {
+            "date": "2025-12-26",
+            "day_number": 26,
+            "day_name": "Fri",
+            "is_friday": true,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:22",
+                "Sunrise": "08:47",
+                "Dhuhr": "12:13",
+                "Asr": "13:50",
+                "Maghrib": "15:39",
+                "Isha": "17:56"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:44",
+                "Isha_Jamaah": "18:30",
+                "Jumuah": "13:15"
+            }
+        },
+        "2025-12-27": {
+            "date": "2025-12-27",
+            "day_number": 27,
+            "day_name": "Sat",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:23",
+                "Sunrise": "08:47",
+                "Dhuhr": "12:13",
+                "Asr": "13:51",
+                "Maghrib": "15:40",
+                "Isha": "17:57"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:45",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-28": {
+            "date": "2025-12-28",
+            "day_number": 28,
+            "day_name": "Sun",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:23",
+                "Sunrise": "08:47",
+                "Dhuhr": "12:14",
+                "Asr": "13:52",
+                "Maghrib": "15:41",
+                "Isha": "17:57"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:46",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-29": {
+            "date": "2025-12-29",
+            "day_number": 29,
+            "day_name": "Mon",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:23",
+                "Sunrise": "08:47",
+                "Dhuhr": "12:14",
+                "Asr": "13:53",
+                "Maghrib": "15:42",
+                "Isha": "17:58"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:47",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-30": {
+            "date": "2025-12-30",
+            "day_number": 30,
+            "day_name": "Tue",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:23",
+                "Sunrise": "08:47",
+                "Dhuhr": "12:15",
+                "Asr": "13:54",
+                "Maghrib": "15:43",
+                "Isha": "17:59"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:48",
+                "Isha_Jamaah": "18:30"
+            }
+        },
+        "2025-12-31": {
+            "date": "2025-12-31",
+            "day_number": 31,
+            "day_name": "Wed",
+            "is_friday": false,
+            "has_custom_times": true,
+            "beginning_times": {
+                "Fajr": "06:23",
+                "Sunrise": "08:47",
+                "Dhuhr": "12:15",
+                "Asr": "13:55",
+                "Maghrib": "15:44",
+                "Isha": "18:00"
+            },
+            "jamaah_times": {
+                "Fajr_Jamaah": "07:00",
+                "Dhuhr_Jamaah": "13:15",
+                "Asr_Jamaah": "14:15",
+                "Maghrib_Jamaah": "15:49",
+                "Isha_Jamaah": "18:30"
+            }
+        }
+    }
+}

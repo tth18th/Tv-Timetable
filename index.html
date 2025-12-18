@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Times Dashboard - TV Display</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* Prevent text selection */
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* Loading animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .container {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Fallback loading screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000; /* Black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+        }
+
+        .loading-content {
+            padding: 40px;
+        }
+
+        .loading-spinner {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: spin 1.5s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <i class="fas fa-mosque"></i>
+            </div>
+            <h1>Prayer Times Dashboard</h1>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="container" style="display: none;">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="masjid-info">
+                <div class="masjid-name">
+                    <i class="fas fa-mosque"></i>
+                    <span>Baitul Mukarram Jame Mosque</span>
+                </div>
+                <div class="masjid-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>44/A Court Street, Dundee</span>
+                </div>
+            </div>
+
+            <!-- Time Display in Middle -->
+            <div class="time-display-wrapper">
+                <div class="time-display">
+                    <div class="time" id="current-time">--:--</div>
+                    <div class="seconds" id="current-seconds">:--</div>
+                </div>
+            </div>
+
+            <div class="datetime-display">
+                <div class="gregorian-date">
+                    <div class="day-name" id="day-name">--</div>
+                    <div class="full-date" id="full-date">-- --- ----</div>
+                </div>
+                <div class="hijri-date" id="hijri-date">
+                    <i class="fas fa-star-and-crescent"></i>
+                    <span>-- ----- ---- AH</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content - Prayer Times -->
+        <div class="main-content" id="main-content">
+            <!-- Fixed Prayer Table -->
+            <div class="prayer-table-fixed">
+                <!-- Table Header -->
+                <div class="prayer-row header">
+                    <div class="prayer-cell prayer-name-header">Prayer</div>
+                    <div class="prayer-cell prayer-beginning-header">Beginning</div>
+                    <div class="prayer-cell prayer-adhan-header">Adhan</div>
+                    <div class="prayer-cell prayer-jamaah-header">Jama'ah</div>
+                    <div class="prayer-cell prayer-status-header">Status</div>
+                </div>
+
+                <!-- Prayer rows will be inserted by JavaScript -->
+                <div id="prayer-rows">
+                    <!-- Loading state -->
+                </div>
+            </div>
+
+            <!-- Next Prayer Highlight -->
+            <div class="next-prayer-highlight" id="next-prayer-highlight" style="display: none;">
+                <div class="highlight-content">
+                    <div class="highlight-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="highlight-text">
+                        <div class="highlight-label">NEXT PRAYER</div>
+                        <div class="highlight-details">
+                            <span class="prayer-name" id="next-prayer-name">--</span>
+                            <span class="separator">|</span>
+                            <span class="prayer-time" id="next-prayer-time">--:--</span>
+                            <span class="separator">|</span>
+                            <span class="countdown" id="next-prayer-countdown">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Information -->
+        <div class="footer" id="footer">
+            <div class="footer-left">
+                <!-- Hide/Show Footer Button -->
+                <button class="footer-toggle-btn" id="footer-toggle-btn">
+                    <i class="fas fa-eye-slash"></i> Hide Footer
+                </button>
+                <div class="status-indicators">
+                    <div class="status-item warning" id="data-status">
+                        <div class="status-dot"></div>
+                        <span>Data: Loading...</span>
+                    </div>
+                    <div class="status-item warning" id="slideshow-status">
+                        <div class="status-dot"></div>
+                        <span>Slideshow: Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-center">
+                <div class="update-info">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Updated: <span id="last-update">--:--</span></span>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="month-display">
+                    <div class="month-nav">
+                        <button class="nav-btn" id="prev-month-btn" title="Previous Month">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="current-month" id="current-month">LOADING</div>
+                        <button class="nav-btn" id="next-month-btn" title="Next Month">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ADHAN Call for Prayer Overlay -->
+        <div class="call-overlay" id="adhan-overlay" style="display: none;">
+            <div class="call-content">
+                <div class="call-icon">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="call-text">
+                    <div class="call-title">ADHAN CALL</div>
+                    <div class="call-subtitle" id="adhan-prayer-name">PRAYER</div>
+                    <div class="call-countdown" id="adhan-countdown">00:20</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JAMA'AH Call for Prayer Overlay -->
+        <div class="jamaah-overlay" id="jamaah-overlay" style="display: none;">
+            <div class="call-content">
+                <div class="call-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="call-text">
+                    <div class="call-title">JAMA'AH TIME</div>
+                    <div class="call-subtitle" id="jamaah-prayer-name">PRAYER</div>
+                    <div class="call-countdown" id="jamaah-countdown">00:30</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slideshow Popup -->
+        <div class="slideshow-popup" id="slideshow-popup" style="display: none;">
+            <div class="popup-overlay"></div>
+            <div class="popup-content">
+                <img id="slideshow-image" src="" alt="Islamic Image" class="popup-image">
+                <div class="popup-info">
+                    <div class="popup-caption" id="slideshow-caption"></div>
+                    <div class="popup-counter">
+                        <span id="image-counter">0/0</span>
+                        <i class="fas fa-image"></i>
+                    </div>
+                </div>
+                <div class="popup-timer">
+                    <div class="timer-bar" id="slideshow-timer-bar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Embedded Data (if needed) -->
+    <script>
+        // Define empty embedded data structure
+        window.EMBEDDED_PRAYER_DATA = {};
+        window.EMBEDDED_IMAGES = [];
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

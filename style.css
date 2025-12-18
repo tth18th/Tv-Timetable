@@ -1,0 +1,1139 @@
+/* ===========================================
+   PRAYER TIMES DASHBOARD - BLACK THEME
+   Only prayer times are colored, everything else is black/white
+   =========================================== */
+
+/* RESET & BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* TECHNOLOGY FONT FACE DECLARATION */
+@font-face {
+    font-family: 'Technology';
+    src: url('fonts/Technology.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Technology';
+    src: url('fonts/Technology-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+:root {
+    /* Color Variables - ONLY FOR PRAYER TIMES */
+    --beginning-color: #00FF9C;    /* Green */
+    --adhan-color: #06B5F9;         /* Blue */
+    --jamaah-color: #FF3000;        /* Red */
+
+    /* Black Theme Colors */
+    --bg-black: #000000;
+    --bg-dark: #0a0a0a;
+    --bg-darker: #050505;
+    --border-dark: #1a1a1a;
+    --text-white: #ffffff;
+    --text-light: #e0e0e0;
+    --text-gray: #888888;
+}
+
+/* MAIN BACKGROUND - SOLID BLACK */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-black) !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    color: var(--text-white) !important;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+}
+
+/* Ensure black covers the entire screen */
+html, body {
+    height: 100%;
+    width: 100%;
+    background: var(--bg-black) !important;
+}
+
+.container {
+    max-width: 1920px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-black) !important;
+}
+
+/* ===========================================
+   HEADER SECTION - BLACK THEME
+   =========================================== */
+.header {
+    background: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--border-dark) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8) !important;
+    flex-shrink: 0;
+    min-height: 110px;
+    position: relative;
+}
+
+.masjid-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.masjid-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-white) !important;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.masjid-name i {
+    font-size: 4.5rem;
+    color: var(--text-white) !important;
+}
+
+.masjid-location {
+    font-size: 2.5rem;
+    color: var(--text-gray) !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Time Display in Middle - BLACK THEME */
+.time-display-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.time-display {
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+    background: rgba(0, 0, 0, 0.8) !important;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 3px solid var(--border-dark) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 1) !important;
+    min-width: 500px;
+    justify-content: center;
+}
+
+/* Time display - White text */
+.time {
+    font-family: 'Technology', 'Courier New', monospace !important;
+    font-weight: 1000 !important;
+    font-size: 10rem;
+    color: var(--text-white) !important;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.seconds {
+    font-family: 'Technology', 'Courier New', monospace !important;
+    font-weight: bold !important;
+    font-size: 7rem;
+    color: var(--text-PureWhite) !important;
+    margin-left: -5px;
+}
+
+.datetime-display {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    min-width: 400px;
+}
+
+.gregorian-date {
+    text-align: right;
+}
+
+.day-name {
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--text-white) !important;
+    margin-bottom: 3px;
+}
+
+.full-date {
+    font-size: 4rem;
+    color: var(--text-white) !important;
+}
+
+.hijri-date {
+    font-size: 4rem;
+    color: var(--text-white) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 8px 15px;
+    border-radius: 50px;
+    border: 1px solid var(--border-dark) !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ===========================================
+   MAIN CONTENT - PRAYER TABLE - BLACK THEME
+   =========================================== */
+.main-content {
+    flex: 1;
+    background: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 15px;
+    padding: 15px;
+    border: 2px solid var(--border-dark) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 1) !important;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Fixed Prayer Table */
+.prayer-table-fixed {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+    height: calc(100vh - 250px);
+    min-height: 550px;
+}
+
+/* Table Header - BLACK THEME */
+.prayer-row.header {
+    background: rgba(20, 20, 20, 0.95) !important;
+    border: 2px solid var(--border-dark) !important;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--text-white) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    height: 65px;
+    min-height: 65px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr 1.2fr 1.2fr 1.5fr;
+}
+
+.prayer-row {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr 1.2fr 1.2fr 1.5fr;
+    background: rgba(15, 15, 15, 0.9) !important;
+    border-radius: 12px;
+    padding: 30px 20px;
+    align-items: center;
+    border: 2px solid var(--border-dark) !important;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: calc(20% - 6.4px);
+    min-height: 90px;
+}
+
+.prayer-row:hover {
+    background: rgba(25, 25, 25, 0.9) !important;
+}
+
+.prayer-row.next-prayer {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    background: rgba(30, 30, 30, 0.9) !important;
+}
+
+.prayer-row.current-prayer {
+    background: rgba(40, 40, 40, 0.9) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.prayer-cell {
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+/* Prayer Names - White */
+.prayer-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-white) !important;
+    text-align: left;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.prayer-icon {
+    font-size: 1.8rem;
+    color: var(--text-white) !important;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 12px;
+    border: 1px solid var(--border-dark) !important;
+}
+
+/* ===========================================
+   PRAYER TIMES - ONLY THESE ARE COLORED!
+   =========================================== */
+.prayer-beginning, .prayer-adhan, .prayer-jamaah {
+    font-family: 'Technology', 'Courier New', monospace !important;
+    font-weight: 800 !important; /* Bold weight for times */
+    letter-spacing: 2px !important;
+    line-height: 1;
+    text-align: center;
+    font-size: 6.5rem; /* Base size for 1080p */
+    text-shadow: 0 0 15px currentColor !important;
+}
+
+/* Individual prayer time colors - ONLY THESE ARE COLORED */
+.prayer-beginning {
+    color: var(--beginning-color) !important;
+    text-shadow: 0 0 20px rgba(0, 255, 156, 0.3) !important;
+}
+
+.prayer-adhan {
+    color: var(--adhan-color) !important;
+    text-shadow: 0 0 20px rgba(6, 181, 249, 0.3) !important;
+}
+
+.prayer-jamaah {
+    color: var(--jamaah-color) !important;
+    text-shadow: 0 0 20px rgba(255, 48, 0, 0.3) !important;
+}
+
+/* Prayer Status - Black Theme */
+.prayer-status {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 110px;
+    background: rgba(30, 30, 30, 0.9) !important;
+    border: 1px solid var(--border-dark) !important;
+    color: var(--text-white) !important;
+}
+
+.status-upcoming {
+    color: #4CAF50 !important;
+    background: rgba(76, 175, 80, 0.1) !important;
+}
+
+.status-current {
+    color: #FFC107 !important;
+    background: rgba(255, 193, 7, 0.1) !important;
+}
+
+.status-passed {
+    color: #9E9E9E !important;
+    background: rgba(158, 158, 158, 0.1) !important;
+}
+
+/* ===========================================
+   NEXT PRAYER HIGHLIGHT - BLACK THEME
+   =========================================== */
+.next-prayer-highlight {
+    background: rgba(20, 20, 20, 0.95) !important;
+    border-radius: 15px;
+    padding: 18px 25px;
+    margin-top: 15px;
+    border: 3px solid var(--border-dark) !important;
+    flex-shrink: 0;
+}
+
+.highlight-content {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.highlight-icon {
+    font-size: 3rem;
+    color: var(--text-white) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    border: 2px solid var(--border-dark) !important;
+}
+
+.highlight-text {
+    flex: 1;
+}
+
+.highlight-label {
+    font-size: 1.8rem;
+    color: var(--text-gray) !important;
+    margin-bottom: 8px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.highlight-details {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.highlight-details .prayer-name {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--text-white) !important;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.separator {
+    font-size: 3.5rem;
+    color: var(--text-gray) !important;
+    font-weight: bold;
+}
+
+/* Next prayer time - White */
+.highlight-details .prayer-time {
+    font-family: 'Technology', 'Courier New', monospace !important;
+    font-weight: 900 !important;
+    font-size: 4rem;
+    color: var(--text-white) !important;
+}
+
+.highlight-details .countdown {
+    font-family: 'Technology', 'Courier New', monospace !important;
+    font-weight: 800 !important;
+    font-size: 3.5rem;
+    color: var(--text-white) !important;
+}
+
+/* ===========================================
+   FOOTER - BLACK THEME
+   =========================================== */
+.footer {
+    background: rgba(10, 10, 10, 0.95) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--border-dark) !important;
+    flex-shrink: 0;
+    height: 65px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hide footer functionality */
+.footer.hidden {
+    transform: translateY(100px);
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    padding: 0;
+    border: none;
+    margin-top: -15px;
+}
+
+.footer-toggle-btn {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--border-dark) !important;
+    color: var(--text-white) !important;
+    padding: 8px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 15px;
+}
+
+.footer-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.status-indicators {
+    display: flex;
+    gap: 15px;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    border: 1px solid var(--border-dark) !important;
+    color: var(--text-white) !important;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4caf50;
+    transition: all 0.3s ease;
+}
+
+.status-item.active .status-dot {
+    background: #4caf50;
+}
+
+.status-item.warning .status-dot {
+    background: #ff9800;
+}
+
+.status-item.inactive .status-dot {
+    background: #f44336;
+}
+
+.update-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: var(--text-gray) !important;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 10px;
+    border: 1px solid var(--border-dark) !important;
+}
+
+.update-info i {
+    color: var(--text-white) !important;
+}
+
+.month-display {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.month-nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.current-month {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-white) !important;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 10px;
+    border: 1px solid var(--border-dark) !important;
+    min-width: 200px;
+    text-align: center;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--border-dark) !important;
+    color: var(--text-white) !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ===========================================
+   ADHAN & JAMA'AH OVERLAYS - BLACK THEME
+   =========================================== */
+
+/* Base overlay styles */
+.call-overlay, .jamaah-overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    padding: 40px 50px;
+    z-index: 2000;
+    display: none;
+    animation: popup-fade 0.5s ease-out;
+    border: 4px solid rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    min-width: 500px;
+    background: rgba(0, 0, 0, 0.95) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* ADHAN Overlay - Blue accent */
+.call-overlay {
+    border-color: var(--adhan-color) !important;
+}
+
+/* JAMA'AH Overlay - Red accent */
+.jamaah-overlay {
+    border-color: var(--jamaah-color) !important;
+}
+
+.call-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.call-icon {
+    font-size: 6rem;
+    color: var(--text-white) !important;
+    animation: pulse 2s infinite;
+}
+
+.call-text {
+    text-align: center;
+}
+
+.call-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--text-white) !important;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.call-subtitle {
+    font-size: 2.8rem;
+    color: var(--text-white) !important;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Countdown - White text */
+.call-countdown {
+    font-family: 'Technology', 'Courier New', monospace !important;
+    font-weight: 900 !important;
+    font-size: 7rem;
+    color: var(--text-white) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 20px 40px;
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.1) !important;
+    min-width: 250px;
+    animation: countdown-pulse 1s infinite;
+}
+
+/* ===========================================
+   SLIDESHOW POPUP - BLACK THEME
+   =========================================== */
+.slideshow-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    animation: popup-fade 0.5s ease-out;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.98) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.popup-content {
+    position: relative;
+    width: 90%;
+    height: 85%;
+    background: rgba(0, 0, 0, 0.9) !important;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.1) !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 20s ease;
+    background: var(--bg-black) !important;
+}
+
+.popup-content:hover .popup-image {
+    transform: scale(1.03);
+}
+
+.popup-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.98), transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.popup-caption {
+    font-size: 2.5rem;
+    color: var(--text-white) !important;
+    max-width: 80%;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.7) !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--text-white) !important;
+}
+
+.popup-counter {
+    font-size: 1.5rem;
+    color: var(--text-white) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.popup-timer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.timer-bar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, var(--adhan-color), var(--jamaah-color)) !important;
+    border-radius: 0 0 25px 25px;
+    transition: width 30s linear;
+}
+
+/* ===========================================
+   ANIMATIONS
+   =========================================== */
+@keyframes popup-fade {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes countdown-pulse {
+    0%, 100% {
+        border-color: rgba(255, 255, 255, 0.1) !important;
+        transform: scale(1);
+    }
+    50% {
+        border-color: rgba(255, 255, 255, 0.3) !important;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* ===========================================
+   LOADING STATE - BLACK THEME
+   =========================================== */
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.8rem;
+    color: var(--text-white) !important;
+    gap: 15px;
+    background: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.loading i {
+    animation: spin 1.5s linear infinite;
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN - BLACK THEME
+   =========================================== */
+
+/* For 4K Screens (3840x2160) */
+@media (min-width: 2560px) and (min-height: 1440px) {
+    .container {
+        max-width: 3840px;
+        padding: 30px;
+    }
+
+    .header {
+        min-height: 150px;
+        padding: 20px 30px;
+    }
+
+    .masjid-name {
+        font-size: 4rem;
+    }
+
+    .masjid-location {
+        font-size: 5rem;
+    }
+
+    .time {
+        font-size: 17rem !important;
+    }
+
+    .seconds {
+        font-size: 11rem !important;
+    }
+
+    .day-name {
+        font-size: 5rem;
+    }
+
+    .full-date {
+        font-size: 6rem;
+        color: White;
+    }
+
+    .hijri-date {
+        font-size: 6rem;
+    }
+
+    .prayer-row.header {
+        font-size: 5rem;
+        height: 130px;
+    }
+
+    .prayer-name {
+        font-size: 5.4rem;
+    }
+
+    .prayer-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.4rem;
+    }
+
+    .prayer-beginning, .prayer-adhan, .prayer-jamaah {
+        font-size: 18rem !important; /* Larger for 4K */
+        text-shadow: 0 0 25px currentColor !important;
+    }
+
+    .prayer-status {
+        font-size: 3rem;
+        min-width: 180px;
+    }
+
+    .highlight-details .prayer-name,
+    .highlight-details .prayer-time {
+        font-size: 8rem;
+    }
+
+    .highlight-details .countdown {
+        font-size: 4.5rem;
+    }
+
+    .call-overlay, .jamaah-overlay {
+        min-width: 700px;
+        padding: 60px 70px;
+    }
+
+    .call-title {
+        font-size: 4.5rem;
+    }
+
+    .call-subtitle {
+        font-size: 3.5rem;
+    }
+
+    .call-countdown {
+        font-size: 9rem;
+        padding: 30px 50px;
+    }
+}
+
+/* For 2K/QHD Screens (2560x1440) */
+@media (min-width: 1920px) and (min-height: 1080px) {
+    .prayer-beginning, .prayer-adhan, .prayer-jamaah {
+        font-size: 18rem !important;
+        text-shadow: 0 0 20px currentColor !important;
+    }
+
+    .time {
+        font-size: 18rem !important;
+    }
+
+    .seconds {
+        font-size: 15rem !important;
+    }
+
+    .call-overlay, .jamaah-overlay {
+        min-width: 600px;
+    }
+
+    .call-title {
+        font-size: 4rem;
+    }
+
+    .call-subtitle {
+        font-size: 3rem;
+    }
+
+    .call-countdown {
+        font-size: 8rem;
+    }
+}
+
+/* For 1080p Screens (1920x1080) - Base size */
+@media (max-width: 1920px) and (max-height: 1080px) {
+    .prayer-beginning, .prayer-adhan, .prayer-jamaah {
+        font-size: 18rem !important;
+        text-shadow: 0 0 15px currentColor !important;
+    }
+}
+
+/* For smaller screens */
+@media (max-height: 900px) {
+    .header {
+        min-height: 90px;
+    }
+
+    .masjid-name {
+        font-size: 1.8rem;
+    }
+
+    .time {
+        font-size: 6rem !important;
+    }
+
+    .seconds {
+        font-size: 3rem !important;
+    }
+
+    .prayer-table-fixed {
+        height: calc(100vh - 210px);
+        min-height: 450px;
+    }
+
+    .prayer-row {
+        padding: 20px 12px;
+        min-height: 70px;
+    }
+
+    .prayer-name {
+        font-size: 1.8rem;
+    }
+
+    .prayer-beginning, .prayer-adhan, .prayer-jamaah {
+        font-size: 5.5rem !important;
+        text-shadow: 0 0 10px currentColor !important;
+    }
+
+    .highlight-details .prayer-name,
+    .highlight-details .prayer-time {
+        font-size: 3rem;
+    }
+
+    .highlight-details .countdown {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1600px) {
+    .time-display {
+        min-width: 400px;
+    }
+
+    .time {
+        font-size: 6rem !important;
+    }
+
+    .seconds {
+        font-size: 3rem !important;
+    }
+
+    .prayer-beginning, .prayer-adhan, .prayer-jamaah {
+        font-size: 5.5rem !important;
+    }
+}
+
+@media (max-width: 1366px) {
+    .time {
+        font-size: 5rem !important;
+    }
+
+    .seconds {
+        font-size: 2.5rem !important;
+    }
+
+    .prayer-beginning, .prayer-adhan, .prayer-jamaah {
+        font-size: 5rem !important;
+    }
+
+    .prayer-name {
+        font-size: 1.6rem;
+    }
+}
+
+/* Fullscreen adjustments */
+:fullscreen .container,
+:-webkit-full-screen .container,
+:-moz-full-screen .container {
+    width: 100vw !important;
+    height: 100vh !important;
+    padding: 20px !important;
+    max-width: 100% !important;
+    background: var(--bg-black) !important;
+}
+
+/* TV Mode specific styles */
+.tv-mode {
+    cursor: none !important;
+}
+
+.tv-mode * {
+    cursor: none;
+}
+
+/* Prevent any scrolling */
+:fullscreen body,
+:-webkit-full-screen body,
+:-moz-full-screen body,
+.tv-mode body {
+    overflow: hidden !important;
+    background: var(--bg-black) !important;
+}
+
+/* Jumu'ah specific styles - Black Theme */
+.jumuah-notice {
+    background: rgba(0, 150, 136, 0.1) !important;
+    border-color: rgba(0, 150, 136, 0.3) !important;
+}
+
+@keyframes jumuah-pulse {
+    0% {
+        box-shadow: 0 0 20px rgba(0, 150, 136, 0.1);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(0, 150, 136, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 150, 136, 0.1);
+    }
+}
+
+/* Make sure all text elements that should be white are white */
+.prayer-name-header,
+.prayer-beginning-header,
+.prayer-adhan-header,
+.prayer-jamaah-header,
+.prayer-status-header,
+#last-update,
+#current-month,
+.footer-toggle-btn span,
+.status-item span,
+.update-info span {
+    color: var(--text-white) !important;
+}
+
+/* Last update time - White with Technology font */
+#last-update {
+    font-family: 'Technology', 'Courier New', monospace !important;
+    font-weight: normal !important;
+    font-size: 1.3rem !important;
+    letter-spacing: 1.5px;
+    color: var(--text-white) !important;
+}
